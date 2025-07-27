@@ -603,3 +603,45 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* meme gallery section */
+
+.meme-gallery {
+  padding: 2rem;
+  background-color: transparent;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.meme-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meme-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin: 0 20px;
+  }
+}
